@@ -1,85 +1,86 @@
-<p align="center">
-  Support my work here: 
-  <a href="https://bags.fm/DEffWzJyaFRNyA4ogUox631hfHuv3KLeCcpBh2ipBAGS">Bags.fm</a> •
-  <a href="https://jup.ag/tokens/DEffWzJyaFRNyA4ogUox631hfHuv3KLeCcpBh2ipBAGS">Jupiter</a> •
-  <a href="https://photon-sol.tinyastro.io/en/lp/Qa5ZCCwrWoPYckNXXMCAhCsw8gafgYFAu1Qes3Grgv5?handle=">Photon</a> •
-  <a href="https://dexscreener.com/solana/qa5zccwrwopycknxxmcahcsw8gafgyfau1qes3grgv5">DEXScreener</a>
-</p>
+# ai-tool-prompts
 
-<p align="center">Official CA: DEffWzJyaFRNyA4ogUox631hfHuv3KLeCcpBh2ipBAGS (on Solana)</p>
+Claude Code plugin (and Claude.ai dashboard skill bundles) wrapping the system
+prompts and tool schemas of 32 AI coding/assistant tools — Cursor, Windsurf,
+Claude Code, v0, Devin, Lovable, Replit, Warp, and more. Sourced from
+[`x1xhlol/system-prompts-and-models-of-ai-tools`](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools).
 
----
+Each skill activates when you ask Claude to imitate, compare, or analyse a
+specific tool's prompting style, then loads the canonical source files
+bundled inside that skill's `sources/` directory.
 
-<a href="https://discord.gg/NwzrWErdMU" target="_blank">
-  <img src="https://img.shields.io/discord/1402660735833604126?label=LeaksLab%20Discord&logo=discord&style=for-the-badge" alt="LeaksLab Discord" />
-</a>
+## Install (Claude Code, all projects)
 
+One-time, from any Claude Code session:
 
-<a href="https://trendshift.io/repositories/14084" target="_blank"><img src="https://trendshift.io/api/badge/repositories/14084" alt="x1xhlol%2Fsystem-prompts-and-models-of-ai-tools | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+```text
+/plugin marketplace add aupowell22-code/Claudecode-
+/plugin install ai-tool-prompts@ai-tool-prompts-marketplace
+```
 
+After that, every project on that machine can trigger any of the 32 skills
+listed below.
 
-[![Build Status](https://app.cloudback.it/badge/x1xhlol/system-prompts-and-models-of-ai-tools)](https://cloudback.it)
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/x1xhlol/system-prompts-and-models-of-ai-tools)
+## Install (Claude.ai dashboard)
 
----
+Each `dist/skills/<slug>.zip` is a standalone Claude skill bundle. Upload them
+at <https://claude.ai/settings/skills> → Custom skills → **Upload skill**.
+`dist/skills/all-skills.zip` aggregates the lot.
 
-## Support the Project
+## Skills
 
-If you find this collection valuable and appreciate the effort involved in obtaining and sharing these insights, please consider supporting the project.
+| Slug | Tool | Source folder |
+| --- | --- | --- |
+| `amp` | Amp | `Amp/` |
+| `anthropic` | Anthropic (Claude.ai, Claude Code, Claude for Chrome) | `Anthropic/` |
+| `augment-code` | Augment Code | `Augment Code/` |
+| `cluely` | Cluely | `Cluely/` |
+| `codebuddy` | CodeBuddy | `CodeBuddy Prompts/` |
+| `comet-assistant` | Comet Assistant | `Comet Assistant/` |
+| `cursor` | Cursor | `Cursor Prompts/` |
+| `devin` | Devin AI | `Devin AI/` |
+| `dia` | Dia | `dia/` |
+| `emergent` | Emergent | `Emergent/` |
+| `google-ai` | Google AI Studio + Antigravity | `Google/` |
+| `junie` | Junie | `Junie/` |
+| `kiro` | Kiro | `Kiro/` |
+| `leap-new` | Leap.new | `Leap.new/` |
+| `lovable` | Lovable | `Lovable/` |
+| `manus` | Manus | `Manus Agent Tools & Prompt/` |
+| `notion-ai` | Notion AI | `NotionAi/` |
+| `orchids` | Orchids.app | `Orchids.app/` |
+| `oss-agent-prompts` | Cline, Bolt, RooCode, Codex CLI, Gemini CLI, Lumo | `Open Source prompts/` |
+| `perplexity` | Perplexity | `Perplexity/` |
+| `poke` | Poke | `Poke/` |
+| `qoder` | Qoder | `Qoder/` |
+| `replit` | Replit | `Replit/` |
+| `same-dev` | Same.dev | `Same.dev/` |
+| `trae` | Trae | `Trae/` |
+| `traycer` | Traycer AI | `Traycer AI/` |
+| `v0` | v0 | `v0 Prompts and Tools/` |
+| `vscode-agent` | VSCode / Copilot Chat agent | `VSCode Agent/` |
+| `warp` | Warp.dev | `Warp.dev/` |
+| `windsurf` | Windsurf | `Windsurf/` |
+| `xcode` | Xcode AI | `Xcode/` |
+| `zai-code` | Z.ai Code | `Z.ai Code/` |
 
-You can show your support via:
+## Layout
 
-- **Cryptocurrency:**  
-  - **BTC:** `bc1q7zldmzjwspnaa48udvelwe6k3fef7xrrhg5625`  
-  - **LTC:** `LRWgqwEYDwqau1WeiTs6Mjg85NJ7m3fsdQ`  
-  - **ETH:** `0x3f844B2cc3c4b7242964373fB0A41C4fdffB192A`
-- **Patreon:** https://patreon.com/lucknite
-- **Ko-fi:** https://ko-fi.com/lucknite
+```
+.claude-plugin/
+  plugin.json            Claude Code plugin manifest
+  marketplace.json       Marketplace entry pointing at this repo
+skills/
+  <slug>/
+    SKILL.md             Frontmatter + activation guidance
+    sources/             Bundled prompt and tool files
+dist/skills/
+  <slug>.zip             Dashboard upload bundles
+  all-skills.zip         All 32 zips, aggregated
+<Tool folder>/           Upstream prompt mirror (unchanged from x1xhlol)
+```
 
-Thank you for your support!
+## License
 
----
-
-## Security Notice for AI Startups
-
-> **Warning:** If you're an AI startup, make sure your data is secure. Exposed prompts or AI models can easily become a target for hackers.
-
-> **Important:** Interested in securing your AI systems?  
-> Check out **[ZeroLeaks](https://zeroleaks.ai/)**, a service designed to help startups **identify and secure** prompt injection and system prompt extraction risks.
-
----
-
-# Sponsors
-
-Sponsor the most comprehensive repository of AI system prompts and reach thousands of developers.
-
-[Get Started](mailto:lucknitelol@pm.me)
-
----
-
-## Roadmap & Feedback
-
-> Open an issue.
-
-> **Latest Update:** 08/03/2026
-
----
-
-## Connect With Me
-
-- **X:** [NotLucknite](https://x.com/NotLucknite)
-- **Discord**: `x1xhlol`
-- **Email**: `lucknitelol@pm.me`
-
-
-## Star History
-
-<a href="https://www.star-history.com/#x1xhlol/system-prompts-and-models-of-ai-tools&Date">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=x1xhlol/system-prompts-and-models-of-ai-tools&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=x1xhlol/system-prompts-and-models-of-ai-tools&type=Date" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=x1xhlol/system-prompts-and-models-of-ai-tools&type=Date" />
-  </picture>
-</a>
-
-**Drop a star if you find this useful!**
+Upstream prompt content remains under its original `LICENSE.md` (in this repo
+root). Plugin scaffolding is MIT.

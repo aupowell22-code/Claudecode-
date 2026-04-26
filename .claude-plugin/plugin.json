@@ -1,0 +1,11 @@
+{
+  "name": "ai-tool-prompts",
+  "description": "Reference skills wrapping the system prompts and tool schemas of 32 AI coding/assistant tools (Cursor, Windsurf, Claude Code, v0, Devin, Lovable, and more). Each skill activates when imitating, comparing, or analysing that tool's prompt design.",
+  "version": "0.1.0",
+  "author": {
+    "name": "aupowell22-code"
+  },
+  "homepage": "https://github.com/aupowell22-code/Claudecode-",
+  "repository": "https://github.com/aupowell22-code/Claudecode-",
+  "license": "MIT"
+}

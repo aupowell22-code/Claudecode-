@@ -1,3 +1,2 @@
-# Skill staging directories — only the *.zip artifacts are tracked.
-dist/skills/*/
-!dist/skills/README.md
+# Nothing to ignore right now. Plugin skills live under skills/, dashboard
+# zips under dist/skills/*.zip — both tracked.

@@ -1,0 +1,13 @@
+{
+  "name": "ai-tool-prompts-marketplace",
+  "owner": {
+    "name": "aupowell22-code"
+  },
+  "plugins": [
+    {
+      "name": "ai-tool-prompts",
+      "description": "Reference skills wrapping the system prompts and tool schemas of 32 AI coding/assistant tools.",
+      "source": "."
+    }
+  ]
+}
