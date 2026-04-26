@@ -1,0 +1,3 @@
+# Skill staging directories — only the *.zip artifacts are tracked.
+dist/skills/*/
+!dist/skills/README.md
