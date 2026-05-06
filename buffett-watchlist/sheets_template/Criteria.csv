@@ -1,0 +1,12 @@
+Metric,Threshold,Operator,Notes
+Return on Equity,0.15,>=,10-yr avg ideally; >= 15%
+Debt / Equity,0.5,<=,Conservative balance sheet
+Operating margin,0.15,>=,Pricing power signal
+Gross margin,0.40,>=,Brand / cost moat
+Net margin,0.10,>=,Operating efficiency
+Free cash flow,0,>,Real economic earnings
+Earnings growth,0,>,Predictable compounder
+P/E ratio,25,<=,Reasonable price
+Discount rate,0.10,=,DCF discount rate
+Terminal growth,0.025,=,Perpetual growth assumption
+Margin of safety,0.30,=,Buy at 70% of intrinsic value

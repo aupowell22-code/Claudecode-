@@ -1,0 +1,28 @@
+# Buffett-favored / Berkshire-adjacent names — sample watchlist
+# One ticker per line. Lines starting with # are ignored.
+KO
+PEP
+KHC
+MCD
+SBUX
+COST
+WMT
+PG
+CL
+JNJ
+PFE
+MMM
+HD
+LOW
+AXP
+V
+MA
+JPM
+BAC
+WFC
+MCO
+SPGI
+MSFT
+AAPL
+GOOGL
+BRK-B

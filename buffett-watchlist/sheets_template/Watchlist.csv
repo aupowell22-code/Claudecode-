@@ -1,0 +1,8 @@
+Ticker,Company,Sector,Moat type,Moat 1-5,ROE,D/E,Op margin,Gross margin,Net margin,FCF (USD),P/E,Price,Intrinsic value,Buy below,% to buy zone,Score,Verdict,Last reviewed,Notes
+KO,Coca-Cola,Consumer Defensive,Brand,5,,,,,,,,,,,,,,,Iconic brand; pricing power; bottling network
+COST,Costco,Consumer Defensive,Cost,5,,,,,,,,,,,,,,,Membership flywheel; SKU discipline
+MCO,Moody's,Financial Services,Switching,5,,,,,,,,,,,,,,,Duopoly with S&P; regulatory moat
+V,Visa,Financial Services,Network,5,,,,,,,,,,,,,,,Two-sided network; capital-light
+AXP,American Express,Financial Services,Brand,4,,,,,,,,,,,,,,,Affluent customer base; closed loop
+MSFT,Microsoft,Technology,Switching,5,,,,,,,,,,,,,,,Office/Azure switching costs
+AAPL,Apple,Technology,Brand,5,,,,,,,,,,,,,,,Ecosystem lock-in; services tailwind
